@@ -62,18 +62,30 @@ elif edad > 18 and edad > 65:
 else:print("Es menor de edad")
 
 
-
-
 '''7. Escribe una expresión que determine si una contraseña es válida cuando:
 • Tiene más de 8 caracteres
 • Contiene la letra "@"
+
 • No contiene espacios'''
+
+contraseña = "holaquetal@"
+
+if " " not in contraseña and "@" in contraseña and len(contraseña) > 8:
+    print("contraseña valida")
+else: print ("Contraseña invalida")
 
 
 '''8. Dada la cadena "pythonista":
 • Muestra la primera letra
 • Muestra la última
 • Muestra la letra con índice 4'''
+
+palabra = "pythonista"
+
+print(palabra[1])
+print(palabra[-1])
+print(palabra[4])
+
 
 '''9. Pide una cadena de caracteres por teclado e imprímela en 2 líneas dividida por la mitad. No
 se pueden usar bucles. Por ejemplo, la cadena "casa" daría como resultado
@@ -83,7 +95,10 @@ Y la cadena "remar" daría
 rem
 ar'''
 
-
+cadena = input("Escribe... ")
+mitad = len(cadena)/2
+print(cadena[:mitad])
+print(cadena[mitad:])
 
 '''10. Toma una frase y crea una nueva cadena donde las letras en índice par estén en minúscula y
 as de índice impar en mayúscula.'''
