@@ -103,13 +103,143 @@ print(cadena[mitad:])
 '''10. Toma una frase y crea una nueva cadena donde las letras en índice par estén en minúscula y
 as de índice impar en mayúscula.'''
 
+frase = ("Hola que tal")
+frasn = (" ")
+for i , valor in enumerate (frase):
+    
+    if i % 2 == 0:
+        frasn+=valor.lower()
+    else:
+        frasn+=valor.upper()
 
-
+print(frasn)
 
 '''11. Declara variables de todos los tipos que hemos estudiado y muestra por pantalla para cada
 una de ellas:
 La variable <nombre de la vble> vale <valor de la vble> y es de tipo <tipo de la vble>'''
 
+inte = 12
+floatin = 1.1
+frase = "Hola"
+bol = True
+
+print(f"La variable inte vale {inte} y es de tipo {type(inte)}")
+print(f"La variable floatin vale {floatin} y es de tipo {type(floatin)}")
+print(f"La variable frase vale {frase} y es de tipo {type(frase)}")
+print(f"La variable inte vale {bol} y es de tipo {type(bol)}")
+
 
 
 '''12. Dado un valor en segundos, usa variables para calcular horas, minutos y segundos'''
+tiempo = 5000
+horas = 0
+minutos = 0
+segundos = 0
+
+if tiempo >= 60:
+     minutos= tiempo //60
+     minutos = minutos %60
+else:segundos = tiempo 
+
+if minutos >= 60:
+     horas = minutos //60
+     minutos = minutos %60
+
+'''13. Calcula si un año introducido por teclado es bisiesto (los divisibles por 4 excepto los que
+también sean divisibles por 100 o por 400)'''
+
+año = 3000
+
+if año % 4 ==0 and año % 100 != 0 and año % 400 != 0:
+    print("Es bisiesto")
+else:
+    print ("No bisiesto")
+
+'''14. Dado un número, comprueba si su valor absoluto es mayor que 10 sin usar abs()'''
+
+numero =2.5
+
+
+'''15. Compara tres números y determina cuál es el mayor usando solo operadores relacionales'''
+
+num1 = 10
+num2 = 2
+num3= 4
+
+if num1 > num2:
+    if num1 > num3:
+        print (f"{num1}")
+    else: print(num3)
+elif(num2 > num3):
+    print (num2)
+else:print(num3)
+
+'''16. Comprueba si un número es par o múltiplo de 5 usando or'''
+
+num = 10
+
+if num%2==0 or num%5==0:
+    print("Bien")
+
+
+
+
+'''17. Escribe un programa que pregunte si llueve y si tienes paraguas, y determine si puedes salir
+(usa lógica)'''
+
+llueve= input ("Llueve?")
+
+if llueve == "si":
+    paraguas = ('Llevas paraguas?')
+    if paraguas == "si":
+        print("Sal")
+    else:print("Coje uno y sal")
+else:print("No salgas")
+
+'''18. Realiza un desplazamiento a la izquierda: calcula 7 << 2 y explica el resultado'''
+
+print(7<<2) #111
+print(28) #11100
+
+
+'''19. Realiza un desplazamiento a la derecha: calcula 20 >> 3'''
+
+print(20>>3) # 10100 >> #00010
+
+
+
+'''20. Aplica el operador NOT (~) a 0b1010 y muestra el resultado en binario usando una máscara
+de 4 bits'''
+
+# Si queremos usar el operador ~ para invertir sin complemento a 2 necesitamos usar máscaras
+n = ~ 0b101
+bits = 3
+
+mask = (1 << bits) - 1   # 0b111
+r = ~n & mask            # invierto y recorto a 3 bits
+
+print(f"{r:b}")   # 010
+
+
+
+
+'''21. Escribe un programa que determine si el bit menos significativo de un número es 1 (el menos
+significativo es el que está más a la derecha)'''
+
+num = 0b10101010
+
+if num & 1 == 1:
+    print ("par")
+else:print("impar")
+
+#cuarto digito
+
+explicanum = 0b10101010  # 170
+
+# Desplazamos 3 posiciones a la derecha
+bit = (explicanum >> 3) & 1
+
+if bit == 1:
+    print("El cuarto bit es 1")
+else:
+    print("El cuarto bit es 0")
