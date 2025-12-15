@@ -94,11 +94,10 @@ sa
 Y la cadena "remar" daría
 rem
 ar'''
-
-cadena = input("Escribe... ")
-mitad = len(cadena)/2
-print(cadena[:mitad])
-print(cadena[mitad:])
+frase = input("Dame una frase: ")
+mitad = len(frase)//2   
+print(frase[:mitad])
+print(frase[mitad:])
 
 '''10. Toma una frase y crea una nueva cadena donde las letras en índice par estén en minúscula y
 as de índice impar en mayúscula.'''
@@ -213,7 +212,7 @@ de 4 bits'''
 
 # Si queremos usar el operador ~ para invertir sin complemento a 2 necesitamos usar máscaras
 n = ~ 0b101
-bits = 3
+bits = 4
 
 mask = (1 << bits) - 1   # 0b111
 r = ~n & mask            # invierto y recorto a 3 bits
